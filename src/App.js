@@ -50,7 +50,7 @@ const App = (props) => {
     const updatePost = async (post) => {
         console.log(post._id)
         try {
-            axios.put(`https://aboudehblog.herokuapp.com/posts/posts/${post._id}`, { "title": post.title, "content": post.content }).then(() => sendGetRequest())
+            axios.put(`https://aboudehblog.herokuapp.com/posts/${post._id}`, { "title": post.title, "content": post.content }).then(() => sendGetRequest())
         } catch (error) {
 
         }
