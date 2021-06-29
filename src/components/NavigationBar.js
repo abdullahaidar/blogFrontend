@@ -26,7 +26,9 @@ export const NavigationBar = () => {
             <Link to='/'>Posts</Link>
           </li>
           <li>
-            <Link to='/new'>Add New Post</Link>
+            <Link to='/new'>Add Post</Link>
+            {/* <Link to='/signin'>Add Post</Link> */}
+
           </li>
         </ul>
       </nav>
