@@ -25,7 +25,7 @@ const App = (props) => {
 
     const sendGetRequest = async () => {
         try {
-            axios.get('http://localhost:3001/posts').then(resp => setPosts(resp.data))
+            axios.get('https://aboudehblog.herokuapp.com/posts/').then(resp => setPosts(resp.data))
         } catch (error) {
             console.log(error);
         }
@@ -33,7 +33,7 @@ const App = (props) => {
 
     const addPost = async (post) => {
         try {
-            axios.post('http://localhost:3001/posts', { "title": post.title, "content": post.content }).then(() => sendGetRequest())
+            axios.post('https://aboudehblog.herokuapp.com/posts/', { "title": post.title, "content": post.content }).then(() => sendGetRequest())
         } catch (error) {
             console.log(error);
         }
@@ -42,7 +42,7 @@ const App = (props) => {
     const deletePost = async (id) => {
         console.log(id);
         try {
-            axios.delete(`http://localhost:3001/posts/${id}`).then(() => sendGetRequest())
+            axios.delete(`https://aboudehblog.herokuapp.com/posts/${id}`).then(() => sendGetRequest())
         } catch (error) {
         }
     }
@@ -50,7 +50,7 @@ const App = (props) => {
     const updatePost = async (post) => {
         console.log(post._id)
         try {
-            axios.put(`http://localhost:3001/posts/${post._id}`, { "title": post.title, "content": post.content }).then(() => sendGetRequest())
+            axios.put(`https://aboudehblog.herokuapp.com/posts/posts/${post._id}`, { "title": post.title, "content": post.content }).then(() => sendGetRequest())
         } catch (error) {
 
         }

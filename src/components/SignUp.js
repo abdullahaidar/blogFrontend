@@ -22,7 +22,7 @@ export const SignUp = () => {
     const submitUser = async (event) => {
         event.preventDefault()
         try {
-            await axios.post('http://localhost:3001/users', user)
+            await axios.post('https://aboudehblog.herokuapp.com/users', user)
             .then(response =>console.log(response))
             history.push('/')
         } catch (error) {
